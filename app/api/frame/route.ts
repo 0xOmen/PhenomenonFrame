@@ -24,7 +24,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
     <meta property="fc:frame" content="vNext" />
     <meta property="fc:frame:image" content="${process.env.NEXT_PUBLIC_GATEWAY_URL}/Gameplay.png" />
     <meta property="fc:frame:button:1" content="Next" />
-    <meta property="fc:frame:post_url" content="${process.env.NEXT_PUBLIC_GATEWAY_URL}/Gameplay.png" />
+    <meta property="fc:frame:post_url" content="${process.env.NEXT_PUBLIC_GATEWAY_URL}/api/frame?id=${nextId}" />
   </head></html>`);
   }
 }
