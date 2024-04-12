@@ -14,20 +14,11 @@ export async function POST(req: NextRequest): Promise<Response> {
   }
   const headers = new Headers();
   headers.set('Location', `${process.env.NEXT_PUBLIC_BASE_URL}/`);
-  if(path = 'Phenomenon'){
-  const response = NextResponse.redirect(`https://phenomenon.vercel.app/`, {
+  const response = NextResponse.redirect(`${process.env.NEXT_PUBLIC_BASE_URL}/${path}`, {
     headers: headers,
     status: 302,
   });
   return response;
-    }
-    if(path = 'Github'){
-        const response = NextResponse.redirect(`https://github.com/0xomen`, {
-          headers: headers,
-          status: 302,
-        });
-        return response;
-          }
 }
 
 export const dynamic = 'force-dynamic';
